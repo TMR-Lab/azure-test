@@ -2,7 +2,7 @@ module.exports = async function (context, req) {
     const endpoint = process.env.AZURE_OPENAI_ENDPOINT || "https://dummy.cognitiveservices.azure.com";
     const apiKey = process.env.AZURE_OPENAI_API_KEY || "dummy-key-12345";
     const deployment = process.env.AZURE_OPENAI_DEPLOYMENT || "gpt-4o";
-    const apiVersion = process.env.AZURE_OPENAI_API_VERSION || "2024-08-01-preview";
+    const apiVersion = process.env.AZURE_OPENAI_API_VERSION || "2024-02-01";
 
     const messages = req.body && req.body.messages;
     if (!Array.isArray(messages) || messages.length === 0) {
